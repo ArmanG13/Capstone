@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5; /* Lighter background for a softer look */
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto; /* Increased margin for better centering */
+  padding: 30px; /* More padding for a spacious look */
+  background-color: #fff;
+  border-radius: 10px; /* Slightly larger radius for softer edges */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for interactions */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container:hover {
+  transform: translateY(-5px); /* Slight raise effect on hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+  color: #0056b3; /* Theme color for consistency */
+  font-family: 'Helvetica Neue', sans-serif; /* More modern font */
+  margin-bottom: 20px; /* Added space below the heading */
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  display: block;
+  margin-bottom: 10px; /* Increased space for clarity */
+  color: #666;
+  font-size: 14px; /* Slightly smaller text for labels */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="email"], input[type="password"], input[type="text"] {
+  width: 35%; /* Adjust width to 75% of the container's width */
+  margin: 0 auto 20px auto; /* Center the fields horizontally and add margin at the bottom */
+  padding: 12px; /* More padding for larger click area */
+  border: 1px solid #ccc; /* Softer border color */
+  border-radius: 5px; /* Soft edges */
+  box-sizing: border-box; /* Ensures padding does not affect the final width */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  backdrop-filter: blur(5px); /* Blurring the background seen through the input */
+  color: black; /* Text color set to black */
+}
+
+input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover {
+  border-color: #0056b3; /* Highlight effect on hover */
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #0056b3; /* Highlight effect on focus */
+  outline: none; /* Removes the default focus outline */
+}
+
+
+button {
+  background-color: #0056b3;
+  color: black;
+  padding: 12px 24px; /* More padding for a bigger button */
+  border: none;
+  border-radius: 5px; /* Consistent border radius */
+  cursor: pointer;
+  font-size: 16px; /* Slightly larger font */
+  transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+button:hover {
+  background-color: #940000; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight enlargement effect */
 }

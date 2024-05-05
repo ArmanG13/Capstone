@@ -1,0 +1,65 @@
+/* HomePage.css */
+
+body, html {
+  background-color: #0D47A1;
+  color: white;
+  background-image: url('/public/nkar.jpg');
+ 
+  background-size: 100% auto; /* Adjust the width percentage as needed; height automatically adjusts */
+  background-position: center top; /* Positions the image at the bottom center */
+  background-repeat: no-repeat;
+}
+.home-container {
+    position: relative; /* Ensure positioning context for absolutely positioned elements */
+}
+
+
+
+
+.home-container {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for the container with some transparency */
+    backdrop-filter: blur(5px); /* Blurring the background for a frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* White border for subtle contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Darker shadow for more depth */
+    margin: 20px auto; /* Centering the container */
+    max-width: 800px; /* Maximum width for the content */
+}
+
+/* Decorative pseudo-element */
+.home-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px; left: 50%;
+    width: 60px; height: 4px;
+    background: white; /* Decorative bar */
+    border-radius: 2px; 
+    transform: translateX(-50%);
+}
+
+.home-header {
+    color: #BBDEFB; /* A lighter blue color for the header */
+    padding: 20px;
+    font-size: 2rem; /* Larger font size for the header */
+}
+
+.auth-links {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2); /* Slightly visible background for link container */
+    border-radius: 5px; /* Rounded corners for the link container */
+    display: inline-block; /* Make the link container an inline block */
+    margin-top: 20px; /* Space above the link container */
+}
+
+.auth-link, .product-link {
+    color: #BBDEFB; /* Consistent color for links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.auth-link:hover, .product-link:hover {
+    color: #E3F2FD; /* Lighter blue for the hover state */
+    text-decoration: none; /* Removing underline on hover for a cleaner look */
+}
