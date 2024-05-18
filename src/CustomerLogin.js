@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Ensure this import is present
+import { useNavigate } from 'react-router-dom'; 
 
 function LoginPage() {
   // State hooks
@@ -25,7 +25,6 @@ function LoginPage() {
         // Handle successful login response
         console.log('Login successful', response.data);
         navigate('/cart');
-        // You can store authentication tokens or redirect the user here
       })
       .catch(error => {
         // Handle login error
@@ -36,10 +35,10 @@ function LoginPage() {
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2 style={{ marginLeft: '20px' }}>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
+        <div style={{ marginLeft: '20px' }}>
+          <label style={{ color: 'blue' }}>Email:</label>
           <input
             type="email"
             value={email}
@@ -47,8 +46,8 @@ function LoginPage() {
             required
           />
         </div>
-        <div>
-          <label>Password:</label>
+        <div style={{ marginLeft: '20px' }}>
+          <label style={{ color: 'blue' }}>Password:</label>
           <input
             type="password"
             value={password}
@@ -56,8 +55,8 @@ function LoginPage() {
             required
           />
         </div>
-        {error && <div className="error-message">{error}</div>} {/* Display error message */}
-        <button type="submit">Login</button>
+        {error && <div className="error-message" style={{ color: 'red', marginTop: '10px' }}>{error}</div>} {/* Display error message */}
+        <button type="submit" style={{ marginLeft: '20px' }}>Login</button>
       </form>
     </div>
   );
