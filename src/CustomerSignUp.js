@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function SignupPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [uniqueId, setUniqueId] = useState(''); // State for the unique ID
+  const [uniqueId, setUniqueId] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -14,13 +14,13 @@ function SignupPage() {
     const userData = {
       email: email,
       password: password,
-      uniqueId: uniqueId, // Ensure this is included in your request body
+      uniqueId: uniqueId,
     };
 
     axios.post('http://localhost:8080/customer/signup', userData)
       .then(response => {
         console.log('Signup successful', response.data);
-        navigate('/cart'); // Redirect to the cart or another page upon successful signup
+        navigate('/cart');
       })
       .catch(error => {
         console.error('There was an error during signup', error);
@@ -29,10 +29,10 @@ function SignupPage() {
 
   return (
     <div>
-      <h2>Sign Up</h2>
+      <h2 style={{ marginLeft: '20px' }}>Sign Up</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
+        <div style={{ marginLeft: '20px' }}>
+          <label style={{ color: 'blue' }}>Email:</label>
           <input
             type="email"
             value={email}
@@ -40,8 +40,8 @@ function SignupPage() {
             required
           />
         </div>
-        <div>
-          <label>Password:</label>
+        <div style={{ marginLeft: '20px' }}>
+          <label style={{ color: 'blue' }}>Password:</label>
           <input
             type="password"
             value={password}
@@ -49,8 +49,8 @@ function SignupPage() {
             required
           />
         </div>
-        <div>
-          <label>Unique ID:</label>
+        <div style={{ marginLeft: '20px' }}>
+          <label style={{ color: 'blue' }}>Username:</label>
           <input
             type="text"
             value={uniqueId}
@@ -58,7 +58,7 @@ function SignupPage() {
             required
           />
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" style={{ marginLeft: '20px' }}>Sign Up</button>
       </form>
     </div>
   );
